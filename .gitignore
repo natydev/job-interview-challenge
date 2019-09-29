@@ -1,0 +1,16 @@
+*.gem
+*.rbc
+/.config
+/coverage/
+/InstalledFiles
+/pkg/
+/spec/reports/
+/spec/examples.txt
+/tmp/
+/doc/
+/rdoc/
+/.bundle/
+level1-output.json
+level2-output.json
+level3-output.json
+level4-output.json

@@ -1,3 +1,14 @@
+begin
+  gem 'dry-initializer', '3.0.1'
+  gem 'dry-types', '1.1.1'
+  gem 'holidays', '7.1.0'
+  gem 'memoist', '0.16.0'
+rescue Gem::LoadError, LoadError
+  puts "Could not find one or more required gems, " \
+   "please run 'bundle install'"
+end
+
+require './lib/tractus'
 
 # ============ LEVEL 1 ========================
 

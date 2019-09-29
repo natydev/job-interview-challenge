@@ -1,0 +1,14 @@
+AllCops:
+  Exclude:
+    - 'main.rb'
+
+Metrics/BlockLength:
+  Max: 50
+  Exclude:
+    - 'main.rb'
+    - 'lib/**/*.rb'
+    - 'spec/**/*.rb'
+
+Metrics/MethodLength:
+  Exclude:
+    - 'lib/tractus.rb'
