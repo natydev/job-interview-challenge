@@ -3,6 +3,7 @@ begin
   gem 'dry-types', '1.1.1'
   gem 'holidays', '7.1.0'
   gem 'memoist', '0.16.0'
+  gem 'smart_init', '3.3.0'
 rescue Gem::LoadError, LoadError
   puts "Could not find one or more required gems, " \
    "please run 'bundle install'"
