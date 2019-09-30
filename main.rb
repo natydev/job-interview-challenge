@@ -1,7 +1,7 @@
 begin
   gem 'dry-initializer', '3.0.1'
   gem 'dry-types', '1.1.1'
-  gem 'holidays', '7.1.0'
+  gem 'holidays', '8.0.0'
   gem 'memoist', '0.16.0'
   gem 'smart_init', '3.3.0'
 rescue Gem::LoadError, LoadError
@@ -26,3 +26,18 @@ require './lib/tractus'
 # - export all calculated Availabilities into a json file
 
 Tractus.run_first_level
+
+# ============ LEVEL 2 ========================
+
+# WARNING: after an analisys of example output.json
+# data values of holidays and workdays seems not correct at all,
+# maybe is a trap.
+
+# == Level 2 - development tasks/list requirements:
+# - Make model Developer.
+# - Import raw data developers in an array of Developer objects.
+# - update gem "holidays" with latest definitions about Venetian patronal feasts.
+# - Make model DevAvailability.
+# - For each Developer calcutare DevAvailability objects calculated  
+# from periods.
+# - export all calculated personal Availabilities into a json file.
