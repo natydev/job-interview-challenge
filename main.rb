@@ -38,6 +38,6 @@ Tractus.run_first_level
 # - Import raw data developers in an array of Developer objects.
 # - update gem "holidays" with latest definitions about Venetian patronal feasts.
 # - Make model DevAvailability.
-# - For each Developer calcutare DevAvailability objects calculated  
+# - For each Developer calcutate DevAvailability objects calculated  
 # from periods.
 # - export all calculated personal Availabilities into a json file.
