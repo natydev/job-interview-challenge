@@ -13,6 +13,7 @@ require './lib/models/period'
 require './lib/models/day'
 require './lib/models/availability'
 require './lib/models/developer'
+require './lib/models/dev_availability'
 
 require './lib/operations/operation_shared'
 require './lib/operations/importer'
