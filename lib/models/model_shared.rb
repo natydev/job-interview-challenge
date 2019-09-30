@@ -13,6 +13,8 @@ module Tractus
         def attributes
           self.class.dry_initializer.public_attributes(self)
         end
+
+        alias_method :output, :attributes
       end
     end
 

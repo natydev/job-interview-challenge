@@ -10,8 +10,8 @@ RSpec.describe Tractus::Period do
   end
   let(:json_factory) { json_factories.sample }
   let(:subject) { described_class.new(json_factory) }
-  context '#attributes' do
-    it 'return an hash with all attributes' do
+  context '#output' do
+    it 'return an hash with all public attributes' do
       expect(subject.attributes).to eq(
         id: subject.id,
         since: subject.since,
