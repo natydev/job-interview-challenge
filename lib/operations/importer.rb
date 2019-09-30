@@ -20,5 +20,15 @@ module Tractus
         end
       end
     end
+
+    # transform JSON string in an array of Developer objects
+    class Developers < self
+      def call
+        read_data['developers'].map do |dev|
+          Developer.new(id: dev['id'], name: dev['name'],
+                        birth_on: dev['birthday'])
+        end
+      end
+    end
   end
 end
