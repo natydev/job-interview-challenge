@@ -17,6 +17,7 @@ require './lib/operations/operation_shared'
 require './lib/operations/importer'
 require './lib/operations/availability_calculator'
 require './lib/operations/availabilities_calculator'
+require './lib/operations/exporter'
 
 # Top level application Tractus
 module Tractus
