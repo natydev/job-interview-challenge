@@ -33,4 +33,15 @@ module Tractus
     Tractus::Exporter::Availabilities.call(items: availabilities,
                                            filename: filename)
   end
+
+  def self.run_second_level(filename = 'level2-output.json')
+    periods = Tractus::Importer::Periods.call(path: 'data.json')
+    availabilities = Tractus::AvailabilitiesCalculator.call(periods: periods)
+    developers = Tractus::Importer::Developers.call(path: 'data.json')
+    dev_availabilities = Tractus::DevAvailabilitiesCalculator.call(
+      availabilities: availabilities, developers: developers
+    )
+    Tractus::Exporter::Availabilities.call(items: dev_availabilities,
+                                           filename: filename)
+  end
 end
