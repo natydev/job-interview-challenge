@@ -6,6 +6,7 @@ module Tractus
     def self.included(base)
       base.send :extend, ClassMethods
       base.send :extend, Dry::Initializer
+      base.send :extend, Forwardable
 
       class_eval do
         # retrieve hash of public attributes with values
