@@ -37,5 +37,23 @@ RSpec.describe Tractus::Availability do
       expect { subject.increment(:total_days, 3) }
         .to change { subject.total_days }.by(3)
     end
+    it 'raises an error if specified number is less than 1' do
+      expect { subject.increment(:workdays, -rand(0..3)) }
+        .to raise_error(RangeError)
+    end
+  end
+  context 'decrement' do
+    it 'decrement a numeric attribute by 1' do
+      expect { subject.decrement(:holidays) }
+        .to change { subject.holidays }.by(-1)
+    end
+    it 'decrement a numeric attribute by specified number' do
+      expect { subject.decrement(:total_days, 3) }
+        .to change { subject.total_days }.by(-3)
+    end
+    it 'raises an error if specified number is less than 1' do
+      expect { subject.decrement(:workdays, -rand(0..3)) }
+        .to raise_error(RangeError)
+    end
   end
 end

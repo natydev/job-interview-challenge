@@ -18,6 +18,23 @@ module Tractus
 
     # increment a numeric attribute by 1 or by specified 2nd argument
     def increment(atr, num = 1)
+      check_num(num)
+      change_quantity(atr, num)
+    end
+
+    # decrement a numeric attribute by 1 or by specified 2nd argument
+    def decrement(atr, num = 1)
+      check_num(num)
+      change_quantity(atr, -num)
+    end
+
+    private
+
+    def check_num(num)
+      raise(RangeError, 'number must be greater than 0') if num < 1
+    end
+
+    def change_quantity(atr, num)
       instance_variable_set(
         "@#{atr}", instance_variable_get("@#{atr}") + num
       )
