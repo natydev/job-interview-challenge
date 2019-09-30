@@ -27,6 +27,11 @@ RSpec.describe Tractus::Availability do
       )
     end
   end
+  context 'dates' do
+    it 'delegates to period#dates' do
+      expect(subject.dates).to eq(period.dates)
+    end
+  end
   context 'increment' do
     it 'increment a numeric attribute by 1 (if 2nd argument' \
        ' not specified)' do

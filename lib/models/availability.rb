@@ -11,6 +11,8 @@ module Tractus
     option :holidays, Dry::Types['coercible.integer'], default: proc { 0 }
     option :period, reader: :protected
 
+    def_delegator :@period, :dates, :dates
+
     # display customised public attibutes
     def output
       attributes.merge(period_id: period.id)
