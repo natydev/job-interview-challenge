@@ -11,6 +11,7 @@ require 'smart_init'
 require './lib/models/model_shared'
 require './lib/models/period'
 require './lib/models/day'
+require './lib/models/availability'
 
 require './lib/operations/operation_shared'
 require './lib/operations/importer'
