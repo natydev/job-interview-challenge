@@ -24,3 +24,5 @@ require './lib/tractus'
 # - make model Availability
 # - For each Period make an Availability an set in it the calculated data. 
 # - export all calculated Availabilities into a json file
+
+Tractus.run_first_level

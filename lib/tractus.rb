@@ -21,4 +21,10 @@ require './lib/operations/exporter'
 
 # Top level application Tractus
 module Tractus
+  def self.run_first_level(filename = 'level1-output.json')
+    periods = Tractus::Importer::Periods.call(path: 'data.json')
+    availabilities = Tractus::AvailabilitiesCalculator.call(periods: periods)
+    Tractus::Exporter::Availabilities.call(items: availabilities,
+                                           filename: filename)
+  end
 end

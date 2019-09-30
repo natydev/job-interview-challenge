@@ -12,15 +12,18 @@ module Tractus
       new(value: value)
     end
 
+    # returns true when is Sat or Sun
     def weekend?
       [0, 6].include?(value.wday)
     end
     memoize :weekend?
 
+    # returns true when a holiday happens during a weekday
     def holiday?
       canonical_workday? && canonical_holiday?
     end
 
+    # returns true in a weekday without holiday
     def workday?
       canonical_workday? && !canonical_holiday?
     end
