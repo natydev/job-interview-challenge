@@ -43,3 +43,16 @@ Tractus.run_first_level
 # - export all calculated personal Availabilities into a json file.
 
 Tractus.run_second_level
+
+# ============ LEVEL 3 ========================
+
+# WARNING: same issue of Level 2, output.json seems not complete/correct.
+
+# == Level 3 - development tasks/list requirements:
+# - Add subclass model Project from Period (with attribute effort_days).
+# - Import raw data projects in an array of objects.
+# - Make model TeamAvailability: is a sum of all developer  
+#  availabilities for a certain project.
+# - Make model ProAvailability.
+# - export all calculated ProAvailabilities into a json file.
+
