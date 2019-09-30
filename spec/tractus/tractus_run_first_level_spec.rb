@@ -9,10 +9,11 @@ RSpec.describe Tractus do
         "availabilities": [
           {
             "total_days": 365,
-            "workdays": 250,
+            "workdays": 249,
             "weekend_days": 105,
             "holidays": 11,
-            "period_id": 1
+            "period_id": 1,
+            "holidays": 11
           },
           {
             "total_days": 76,

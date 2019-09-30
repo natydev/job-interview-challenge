@@ -34,8 +34,13 @@ module Tractus
       !weekend?
     end
 
+    # Instead of use data under key 'local_holidays' (of data.json)
+    # I decided to contribute some days ago in GEM 'holidays' definitions
+    # https://github.com/holidays/definitions/pull/144
+    # So for now I hardcoded region 'it_pd', in future provide a dynamic
+    # solution such as put key 'region' inside data.json > local_holidays items
     def canonical_holiday?
-      Holidays.on(value, :it).any?
+      Holidays.on(value, :it_pd).any?
     end
     memoize :canonical_holiday?
   end
