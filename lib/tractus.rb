@@ -15,6 +15,7 @@ require './lib/models/day'
 require './lib/models/availability'
 require './lib/models/developer'
 require './lib/models/dev_availability'
+require './lib/models/project'
 
 require './lib/operations/operation_shared'
 require './lib/operations/importer'
