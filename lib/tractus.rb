@@ -24,7 +24,7 @@ require './lib/operations/availability_calculator'
 require './lib/operations/availabilities_calculator'
 require './lib/operations/dev_availability_calculator'
 require './lib/operations/dev_availabilities_calculator'
-
+require './lib/operations/pro_availabilities_calculator'
 require './lib/operations/exporter'
 
 # Top level application Tractus

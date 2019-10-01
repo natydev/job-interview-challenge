@@ -9,6 +9,8 @@ module Tractus
     option :availability, reader: :protected
     option :period, optional: true
 
+    def_delegator :@availability, :period, :availability_period
+
     def developer_id
       developer.id
     end
