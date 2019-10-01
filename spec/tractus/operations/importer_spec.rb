@@ -20,4 +20,12 @@ RSpec.describe Tractus::Importer do
       expect(subject.sample).to be_kind_of(Tractus::Developer)
     end
   end
+  context 'Projects subclass' do
+    let(:filename) { 'level3_projects.json' }
+    let(:subject) { described_class::Projects.call(path: file_path) }
+    it 'open json file projects and create an array of Project objects' do
+      expect(subject.count).to eq(3)
+      expect(subject.sample).to be_kind_of(Tractus::Project)
+    end
+  end
 end

@@ -30,5 +30,17 @@ module Tractus
         end
       end
     end
+
+    # transform JSON string in an array of Project objects
+    class Projects < self
+      def call
+        read_data['projects'].map do |period|
+          Project.new(
+            id: period['id'], since: period['since'],
+            until: period['until'], effort_days: period['effort_days']
+          )
+        end
+      end
+    end
   end
 end
