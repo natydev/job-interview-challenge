@@ -11,6 +11,6 @@ gem 'memoist', '0.16.0'
 gem 'smart_init', '3.3.0'
 
 # only for development/test:
-gem 'rdoc', '6.2.0'
+gem 'rdoc', '6.3.1'
 gem 'rspec', '3.8.0'
 gem 'rubocop', '0.74.0'
